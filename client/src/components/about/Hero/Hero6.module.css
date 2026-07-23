@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap');
+
+.hero {
+  --black: #0d0d0d;
+  --coral: #ff4d3d;
+  --white: #f6f6f4;
+  position: relative;
+  min-height: 90vh;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  isolation: isolate;
+}
+
+/* ---------- Carousel ---------- */
+
+.slides {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: var(--black);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.12);
+  transition: opacity 1.6s ease, transform 7s ease;
+  will-change: opacity, transform;
+}
+
+.slideActive {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1.6s ease, transform 7s ease;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(200deg, rgba(255, 77, 61, 0.45) 0%, rgba(13, 13, 13, 0.75) 45%, rgba(13, 13, 13, 0.95) 100%);
+  mix-blend-mode: multiply;
+}
+
+.grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Top bar ---------- */
+
+.topBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem 0;
+}
+
+.folio {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(246, 246, 244, 0.65);
+}
+
+/* ---------- Content ---------- */
+
+.content {
+  position: relative;
+  max-width: 56rem;
+  margin: auto;
+  padding: 6rem 2rem 2rem;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(246, 246, 244, 0.75);
+  margin: 0 0 1.5rem;
+}
+
+.headline {
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: 400;
+  font-size: clamp(3rem, 10vw, 8rem);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  margin: 0 0 2rem;
+}
+
+.line {
+  display: block;
+}
+
+.lineAccent {
+  color: var(--coral);
+}
+
+.subtext {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-weight: 400;
+  color: rgba(246, 246, 244, 0.78);
+  max-width: 32rem;
+  margin: 0 auto 2.5rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.cta {
+  display: inline-block;
+  border: 1px solid var(--white);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.05em;
+  padding: 1.05rem 2.4rem;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.cta:hover {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: var(--black);
+}
+
+.cta:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+}
+
+/* ---------- Carousel control bar ---------- */
+
+.carouselBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.75rem 3rem;
+}
+
+.slideCount {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: rgba(246, 246, 244, 0.7);
+  flex-shrink: 0;
+}
+
+.progressGroup {
+  display: flex;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.progressTrack {
+  flex: 1;
+  height: 2px;
+  background: rgba(246, 246, 244, 0.22);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s ease;
+}
+
+.heroDarkLines .progressTrack {
+  background: rgba(13, 13, 13, 0.4);
+}
+
+.progressTrack:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+}
+
+.progressFill {
+  position: absolute;
+  inset: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  background: var(--coral);
+}
+
+.heroDarkLines .progressFill {
+  background: var(--black);
+}
+
+.progressFillActive {
+  animation-name: fillBar;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fillBar {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (max-width: 768px) {
+  .topBar,
+  .carouselBar {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .content {
+    padding: 5rem 1.25rem 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide {
+    transition: opacity 1.6s ease;
+    transform: none !important;
+  }
+  .progressFillActive {
+    animation: none;
+    transform: scaleX(1);
+  }
+  .cta {
+    transition: none;
+  }
+}
