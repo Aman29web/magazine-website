@@ -69,11 +69,16 @@ const Footer = () => {
           {/* Brand column */}
           <div className={styles.brandCol}>
             <a href="/" className={styles.logo}>
-              <span className={styles.logoMark}>
+              {/* <span className={styles.logoMark}>
                 <span className={styles.logoMarkLine} />
-              </span>
+              </span> */}
+               <img
+                  src="/logo.png"
+                  alt="The Leadership Gazette"
+                  className={styles.logoImage}
+                />
               <span className={styles.logoText}>
-                The Leadership<span className={styles.logoAccent}>Gazette</span>
+                Leadership<span className={styles.logoAccent}>Gazette</span>
               </span>
             </a>
             <p className={styles.brandDesc}>

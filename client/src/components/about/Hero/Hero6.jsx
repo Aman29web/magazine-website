@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './Hero6.module.css';
 
-const SLIDES = ['/a6.jpg', '/a8.jpg', '/a16.jpg', '/a19.jpg', '/a14.avif', '/a17.jpg'];
+const SLIDES = ['/a8.jpg','/a6.jpg' , '/a16.jpg', '/a19.jpg', '/a14.avif', '/a17.jpg'];
 // Slides whose photos run dark — structural lines switch to ink here
 const DARK_LINE_SLIDES = [1, 3];
 const INTERVAL = 5500;
@@ -44,15 +44,15 @@ const Hero6 = () => {
         <div className={styles.grain} aria-hidden="true" />
       </div>
 
-      <header className={styles.topBar}>
+      {/* <header className={styles.topBar}>
         <span className={styles.folio}>MENA</span>
         <span className={styles.folio}>2026 Edition</span>
-      </header>
+      </header> */}
 
       <div className={styles.content}>
-        <p className={styles.eyebrow}>
+        {/* <p className={styles.eyebrow}>
           Honouring the people shaping the future of work across MENA
-        </p>
+        </p> */}
 
         <h1 className={styles.headline}>
           <span className={styles.line}>THE LEADERSHIP</span>

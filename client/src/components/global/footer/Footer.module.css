@@ -371,3 +371,9 @@
     text-align: center;
   }
 }
+.logoImage {
+  height: 58px; /* Adjust if needed */
+  width: auto;
+  display: block;
+  object-fit: contain;
+}

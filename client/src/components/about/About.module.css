@@ -877,4 +877,17 @@
   line-height: 1.75;
   color: rgba(255, 252, 246, 0.68);
   margin: 0;
+}.believeQuote {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.15;
+  font-weight: 700;
+  color: var(--ink);
+  max-width: 900px; /* increase if needed */
+}
+
+.believeQuoteAccent {
+  display: inline; /* important */
+  color: var(--coral); /* red */
+  font-style: italic;
 }

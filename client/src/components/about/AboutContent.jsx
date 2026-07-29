@@ -120,15 +120,14 @@ const AboutContent = () => {
         {/* What we believe - split layout */}
         <section className={styles.believe}>
           <div className={styles.believeGrid}>
-            <div className={styles.believeLeft}>
-              <span className={styles.kicker}>What We Believe</span>
-              <h2 className={styles.believeQuote}>
-                Leadership is more than a title
-                <span className={styles.believeQuoteAccent}>
-                  —it&rsquo;s a lasting legacy.
-                </span>
-              </h2>
-            </div>
+          <div className={styles.believeLeft}>
+<h2 className={styles.believeQuote}>
+  Leadership is more than a title{" "}
+  <span className={styles.believeQuoteAccent}>
+    —it&rsquo;s a lasting legacy.
+  </span>
+</h2>
+</div>
             <div className={styles.believeRight}>
               <p>
                 It is the ability to inspire, create meaningful impact, challenge
@@ -152,7 +151,7 @@ const AboutContent = () => {
 {/* Editorial focus */}
         <section className={styles.focus}>
           <div className={styles.sectionHead}>
-            <span className={styles.kickerLight}>What Drives Us</span>
+            {/* <span className={styles.kickerLight}>What Drives Us</span> */}
             <h2 className={styles.focusHeading}>Our editorial focus</h2>
           </div>
           <div className={styles.focusGrid}>
@@ -169,7 +168,7 @@ const AboutContent = () => {
         {/* Who we feature */}
         <section className={styles.audience}>
           <div className={styles.sectionHead}>
-            <span className={styles.kicker}>Who We Feature</span>
+            {/* <span className={styles.kicker}>Who We Feature</span> */}
             <h2>
               A meeting point for the world&rsquo;s most influential minds
             </h2>
@@ -193,7 +192,7 @@ const AboutContent = () => {
         {/* Beyond storytelling */}
         <section className={styles.beyond}>
           <div className={styles.sectionHead}>
-            <span className={styles.kickerLight}>Beyond Storytelling</span>
+            {/* <span className={styles.kickerLight}>Beyond Storytelling</span> */}
             <h2>Recognizing excellence, wherever it leads</h2>
           </div>
 
@@ -213,7 +212,7 @@ const AboutContent = () => {
         {/* Testimonials */}
         <section className={styles.testimonials}>
           <div className={styles.sectionHead}>
-            <span className={styles.kicker}>What Leaders Say</span>
+            {/* <span className={styles.kicker}>What Leaders Say</span> */}
             <h2>Stories, in their own words</h2>
           </div>
 
@@ -234,7 +233,7 @@ const AboutContent = () => {
         {/* Our purpose / values */}
         <section className={styles.purpose}>
           <div className={styles.purposeText}>
-            <span className={styles.kicker}>Our Purpose</span>
+            {/* <span className={styles.kicker}>Our Purpose</span> */}
             <p>
               Every conversation we publish, every leader we feature, and every
               award we present is guided by a single purpose—to inspire the
@@ -257,7 +256,7 @@ const AboutContent = () => {
         <section className={styles.reach}>
           <div className={styles.reachInner}>
             <FaMapMarkedAlt className={styles.reachIcon} />
-            <span className={styles.kickerLight}>Global Reach</span>
+            {/* <span className={styles.kickerLight}>Global Reach</span> */}
             <h2>
               Leadership stories from every corner of the globe, delivered to
               a worldwide audience of decision-makers.
@@ -282,7 +281,7 @@ const AboutContent = () => {
         {/* Join the movement / CTA */}
         <section className={styles.join}>
           <div className={styles.joinInner}>
-            <span className={styles.kicker}>Join The Movement</span>
+            {/* <span className={styles.kicker}>Join The Movement</span> */}
             <h2 className={styles.joinTitle}>
               Know a leader whose story deserves to be told?
             </h2>

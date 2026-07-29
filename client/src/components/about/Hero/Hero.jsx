@@ -38,7 +38,7 @@ const Hero = () => {
           <span>·</span>
           <span>FUTURE&nbsp;OF&nbsp;WORK</span>
           <span>·</span>
-          <span>2026&nbsp;EDITION</span>
+          {/* <span>2026&nbsp;EDITION</span> */}
           <span>·</span>
         </div>
       </div>

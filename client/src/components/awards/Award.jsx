@@ -30,6 +30,7 @@ import {
   FaNetworkWired,
 } from "react-icons/fa";
 import styles from "./Award.module.css";
+import Navbar from "../global/navbar/Navbar";
 
 // Flagship, standalone recognition — sits above the six award pillars.
 const SPECIAL_AWARD = {
@@ -240,7 +241,7 @@ const Award = () => {
         {/* Categories */}
         <section className={styles.categories}>
           <div className={styles.sectionHead}>
-            <span className={styles.kicker}>Award Categories</span>
+            {/* <span className={styles.kicker}>Award Categories</span> */}
             <h2>{TOTAL_CATEGORIES} categories, six pillars of excellence</h2>
             <p className={styles.sectionSub}>
               From flagship recognition to region-specific leadership
@@ -294,7 +295,7 @@ const Award = () => {
         {/* Selection process */}
         <section className={styles.process}>
           <div className={styles.sectionHead}>
-            <span className={styles.kickerLight}>How It Works</span>
+            {/* <span className={styles.kickerLight}>How It Works</span> */}
             <h2>From nomination to recognition</h2>
           </div>
 
@@ -346,7 +347,7 @@ const Award = () => {
         <section className={styles.reach}>
           <div className={styles.reachInner}>
             <FaMapMarkedAlt className={styles.reachIcon} />
-            <span className={styles.kickerLight}>Regional Recognition</span>
+            {/* <span className={styles.kickerLight}>Regional Recognition</span> */}
             <h2>
               Celebrated on stages across the MENA region, honoring HR
               leaders wherever bold decisions about people are being made.
@@ -356,7 +357,7 @@ const Award = () => {
  {/* Why recognition matters */}
         <section className={styles.valueSection}>
           <div className={styles.sectionHead}>
-            <span className={styles.kicker}>Why It Matters</span>
+            {/* <span className={styles.kicker}>Why It Matters</span> */}
             <h2>Recognition built to carry weight</h2>
           </div>
 
@@ -375,7 +376,7 @@ const Award = () => {
         {/* Nomination CTA */}
         <section id="nominate" className={styles.nominateCta}>
           <div className={styles.nominateInner}>
-            <span className={styles.kickerLight}>Nominations Open</span>
+            {/* <span className={styles.kickerLight}>Nominations Open</span> */}
             <h2 className={styles.nominateTitle}>
               Know a leader who deserves the spotlight?
             </h2>
@@ -383,7 +384,7 @@ const Award = () => {
               Nominate them for this year&rsquo;s MENA People Excellence
               Awards and help their story reach a region-wide audience.
             </p>
-            <a href="/contact" className={styles.nominateBtn}>
+            <a href="/nomination" className={styles.nominateBtn}>
               <FaTrophy className={styles.nominateBtnIcon} />
               Submit a Nomination
             </a>

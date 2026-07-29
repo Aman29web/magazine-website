@@ -21,28 +21,31 @@ import {
   FaCalendarAlt,
   FaComments,
   FaArrowRight,
+  FaAward,
+  FaGlobe,
+  FaNewspaper,
 } from "react-icons/fa";
 import styles from "./Contact.module.css";
 
 const CONTACT_INFO = [
-  {
-    icon: FaEnvelope,
-    label: "Email Us",
-    value: "hello@theleadershipgazette.com",
-    href: "mailto:hello@theleadershipgazette.com",
-  },
-  {
-    icon: FaPhoneAlt,
-    label: "Call Us",
-    value: "+91 12345 67890",
-    href: "tel:+911234567890",
-  },
-  {
-    icon: FaMapMarkerAlt,
-    label: "Visit Us",
-    value: "402 Business Avenue, New Delhi, India",
-    href: "#",
-  },
+  // {
+  //   icon: FaEnvelope,
+  //   label: "Email Us",
+  //   value: "info@theleadershipgazette.com",
+  //   href: "mailto:info@theleadershipgazette.com",
+  // },
+  // {
+  //   icon: FaPhoneAlt,
+  //   label: "Call Us",
+  //   value: "+91 12345 67890",
+  //   href: "tel:+911234567890",
+  // },
+  // {
+  //   icon: FaMapMarkerAlt,
+  //   label: "Visit Us",
+  //   value: "402 Business Avenue, New Delhi, India",
+  //   href: "#",
+  // },
 ];
 
 const REASONS = [
@@ -82,7 +85,7 @@ const CHANNELS = [
     icon: FaEnvelope,
     title: "Email",
     desc: "Prefer writing? Drop us a note anytime, we read every message.",
-    href: "mailto:hello@theleadershipgazette.com",
+    href: "mailto:info@theleadershipgazette.com",
   },
 ];
 
@@ -164,7 +167,7 @@ const ContactContent = () => {
             <div className={styles.heroStatDivider} />
             <div className={styles.heroStat}>
               <FaGlobeAmericas className={styles.heroStatIcon} />
-              <span>4 Global Desks</span>
+              {/* <span>4 Global Desks</span> */}
             </div>
             <div className={styles.heroStatDivider} />
             <div className={styles.heroStat}>
@@ -201,17 +204,7 @@ const ContactContent = () => {
         </section>
 
         {/* NEW: Quick stats */}
-        <section className={styles.stats}>
-          <div className={styles.statsGrid}>
-            {QUICK_STATS.map(({ icon: Icon, value, label }) => (
-              <div key={label} className={styles.statItem}>
-                <Icon className={styles.statIcon} />
-                <span className={styles.statValue}>{value}</span>
-                <span className={styles.statLabel}>{label}</span>
-              </div>
-            ))}
-          </div>
-        </section>
+      
 
         {/* Form + side panel */}
         <section className={styles.formSection}>
@@ -345,7 +338,7 @@ const ContactContent = () => {
         {/* NEW: Other ways to connect */}
         <section className={styles.channels}>
           <div className={styles.sectionHead}>
-            <span className={styles.kicker}>More Ways To Talk</span>
+            {/* <span className={styles.kicker}>More Ways To Talk</span> */}
             <h2>Pick whatever&rsquo;s easiest for you</h2>
             <p className={styles.sectionSub}>
               The form works great, but if you&rsquo;d rather connect another
@@ -367,32 +360,61 @@ const ContactContent = () => {
         </section>
 
         {/* Global presence */}
-        <section className={styles.offices}>
-          <div className={styles.sectionHead}>
-            <span className={styles.kicker}>Global Presence</span>
-            <h2>Editorial desks across the world</h2>
-            <p className={styles.sectionSub}>
-              Our correspondents and editorial partners work across regions to
-              surface leadership stories wherever they happen.
-            </p>
-          </div>
+      <section className={styles.offices}>
+  <div className={styles.sectionHead}>
+    <h2>Driven by Stories, Connected by Leadership</h2>
+    <p className={styles.sectionSub}>
+      The Leadership Gazette is a digital-first publication dedicated to
+      spotlighting visionary leaders, groundbreaking ideas, and stories that
+      inspire progress. Through conversations with industry pioneers and
+      emerging changemakers, we bring meaningful leadership insights to a
+      global audience.
+    </p>
+  </div>
 
-          <div className={styles.officesGrid}>
-            {OFFICES.map((office) => (
-              <div key={office.city} className={styles.officeCard}>
-                <FaMapMarkerAlt className={styles.officeIcon} />
-                <h3>{office.city}</h3>
-                <span className={styles.officeRegion}>{office.region}</span>
-                <p>{office.detail}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+  <div className={styles.officesGrid}>
+    <div className={styles.officeCard}>
+      <FaUsers className={styles.officeIcon} />
+      <h3>Exclusive Interviews</h3>
+      <p>
+        Conversations with influential leaders, entrepreneurs, and innovators
+        shaping the future of business.
+      </p>
+    </div>
+
+    <div className={styles.officeCard}>
+      <FaAward className={styles.officeIcon} />
+      <h3>Recognition & Awards</h3>
+      <p>
+        Celebrating individuals and organizations creating meaningful impact
+        through leadership and excellence.
+      </p>
+    </div>
+
+    <div className={styles.officeCard}>
+      <FaGlobe className={styles.officeIcon} />
+      <h3>Global Perspectives</h3>
+      <p>
+        Sharing leadership stories and industry insights from diverse sectors
+        and communities around the world.
+      </p>
+    </div>
+
+    <div className={styles.officeCard}>
+      <FaNewspaper className={styles.officeIcon} />
+      <h3>Editorial Excellence</h3>
+      <p>
+        Delivering carefully curated articles, interviews, and features that
+        inform, inspire, and spark meaningful conversations.
+      </p>
+    </div>
+  </div>
+</section>
 
         {/* FAQ */}
         <section className={styles.faq}>
           <div className={styles.sectionHead}>
-            <span className={styles.kickerLight}>Before You Reach Out</span>
+            {/* <span className={styles.kickerLight}>Before You Reach Out</span> */}
             <h2>Quick answers to common questions</h2>
           </div>
 
@@ -431,7 +453,7 @@ const ContactContent = () => {
               We&rsquo;ll help the world <em>hear it.</em>
             </span>
           </h2>
-          <a href="mailto:hello@theleadershipgazette.com" className={styles.closingCta}>
+          <a href="mailto:info@theleadershipgazette.com" className={styles.closingCta}>
             Start The Conversation <FaArrowRight />
           </a>
         </section>

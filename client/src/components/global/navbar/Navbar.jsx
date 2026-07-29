@@ -5,13 +5,13 @@ import styles from "./Navbar.module.css";
 
 const NAV_LINKS = [
   { label: "About Us", href: "/about" },
-  { label: "Interviews", href: "/interviews" },
+  { label: "Interviews", href: "/home" },
   {
     label: "Awards",
     href: "/awards",
     submenu: [
-      { label: "Mena Excellence", href: "/awards" },
-      { label: "Business Excellence", href: "/business-excellence" },
+      { label: "Mena People Excellence Awards", href: "/awards" },
+      { label: "Business Excellence Awards", href: "/home" },
     ],
   },
   { label: "Contact Us", href: "/contact" },
@@ -76,16 +76,18 @@ const Navbar = () => {
     <header className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.inner}>
         {/* Logo */}
-        <Link to="/" className={styles.logo}>
-          <span className={styles.logoMark}>
-            <span className={styles.logoMarkLine} />
-          </span>
-          <span className={styles.logoText}>
-            The Leadership
-            <span className={styles.logoAccent}>Gazette</span>
-          </span>
-        </Link>
+      <Link to="/" className={styles.logo}>
+  <img
+    src="/logo.png"
+    alt="The Leadership Gazette"
+    className={styles.logoImage}
+  />
 
+  <div className={styles.logoText}>
+    <span>The Leadership</span>
+    <span className={styles.logoAccent}> The Leadership Gazette</span>
+  </div>
+</Link>
         {/* Desktop nav */}
         <nav className={styles.navLinks} aria-label="Primary">
           <ul>
