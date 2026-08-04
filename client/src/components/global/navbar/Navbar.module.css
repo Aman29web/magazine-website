@@ -27,26 +27,24 @@
 }
 
 .inner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 18px 40px;
+  max-width: 100%;
+  margin: 0;
+  padding: 1px 40px 1px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
-  transition: padding 0.3s ease;
 }
 
 .navbar.scrolled .inner {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 /* Logo */
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  /* gap: 12px; */
   text-decoration: none;
   flex-shrink: 0;
 }
@@ -83,6 +81,7 @@
   color: var(--ink-navy);
   line-height: 1;
   white-space: nowrap;
+  justify-content: center; 
 }
 
 .logoAccent {
@@ -246,7 +245,7 @@
 
 @media (max-width: 900px) {
   .inner {
-    padding: 16px 24px;
+    /* padding: 16px 24px; */
   }
 
   .navLinks {
@@ -352,7 +351,7 @@
 }
 
 .logoImage {
-  height: 58px; /* Adjust if needed */
+  height: 88px; /* Adjust if needed */
   width: auto;
   display: block;
   object-fit: contain;
@@ -371,4 +370,9 @@
 .logoAccent {
   color: var(--coral);
   font-style: italic;
+}
+@media (max-width: 900px) {
+  .logoText {
+    display: none;
+  }
 }

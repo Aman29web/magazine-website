@@ -75,18 +75,15 @@ const Navbar = () => {
   return (
     <header className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.inner}>
-        {/* Logo */}
       <Link to="/" className={styles.logo}>
+   
   <img
     src="/logo.png"
     alt="The Leadership Gazette"
     className={styles.logoImage}
   />
 
-  <div className={styles.logoText}>
-    <span>The Leadership</span>
-    <span className={styles.logoAccent}> The Leadership Gazette</span>
-  </div>
+  
 </Link>
         {/* Desktop nav */}
         <nav className={styles.navLinks} aria-label="Primary">
