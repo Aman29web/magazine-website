@@ -122,18 +122,18 @@ const Footer = () => {
           <div className={styles.contactCol}>
             <h4>Get In Touch</h4>
             <ul>
-              <li>
+              {/* <li>
                 <FaMapMarkerAlt className={styles.contactIcon} />
                 <span>402 Business Avenue, New Delhi, India</span>
-              </li>
+              </li> */}
               <li>
                 <FaEnvelope className={styles.contactIcon} />
-                <a href="mailto:hello@thevantagepost.com">hello@thevantagepost.com</a>
+                <a href="mailto:info@theleadershipgazette.com">info@theleadershipgazette.com</a>
               </li>
-              <li>
+              {/* <li>
                 <FaPhoneAlt className={styles.contactIcon} />
                 <a href="tel:+911234567890">+91 12345 67890</a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -141,7 +141,7 @@ const Footer = () => {
 
       {/* Bottom bar */}
       <div className={styles.bottomBar}>
-        <p>© {year} The Vantage Post Media LLC. All rights reserved.</p>
+        <p>© {year} The Leadership Gazette</p>
         <ul className={styles.legalLinks}>
           <li>
             <a href="/privacy-policy">Privacy Policy</a>
