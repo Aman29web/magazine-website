@@ -30,7 +30,7 @@
 .heroBg {
   position: absolute;
   inset: 0;
- background-image: url("/a10.avif");
+  background-image: url("/a10.avif");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -375,35 +375,52 @@
   max-width: 640px;
 }
 
-/* Six pillars */
-.pillarsGrid {
+/* 15-category interactive grid */
+.categoryGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.pillarCard {
-  padding: 30px 28px;
+.categoryCard {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  color: inherit;
+  background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--paper);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  padding: 28px 26px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease,
+    background 0.3s ease;
 }
 
-.pillarCard:hover {
+.categoryCard:hover {
   transform: translateY(-6px);
   border-color: transparent;
   box-shadow: 0 20px 40px -22px rgba(255, 77, 94, 0.45);
 }
 
-.pillarHeader {
+.categoryCard:focus-visible {
+  outline: 2px solid var(--electric);
+  outline-offset: 3px;
+}
+
+.categoryCardActive {
+  border-color: var(--coral);
+  background: var(--paper-dim);
+}
+
+.categoryTop {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
-.pillarNum {
+.categoryNum {
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-size: 15px;
@@ -411,7 +428,7 @@
   opacity: 0.5;
 }
 
-.pillarIconWrap {
+.categoryIconWrap {
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -421,50 +438,67 @@
   align-items: center;
   justify-content: center;
   font-size: 16px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.pillarCard h3 {
+.categoryCardActive .categoryIconWrap {
+  background: var(--coral);
+  color: var(--paper);
+}
+
+.categoryCard h3 {
   font-family: "Playfair Display", serif;
-  font-size: 18px;
+  font-size: 16.5px;
   font-weight: 700;
-  margin: 0 0 6px;
-  color: var(--ink);
-}
-
-.pillarCount {
-  display: block;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: var(--coral);
-  margin-bottom: 16px;
-}
-
-.pillarList {
-  list-style: none;
+  line-height: 1.4;
   margin: 0;
-  padding: 16px 0 0;
-  border-top: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  color: var(--ink);
+  padding-right: 26px;
 }
 
-.pillarList li {
-  display: flex;
-  align-items: flex-start;
-  gap: 9px;
-  font-size: 13px;
-  line-height: 1.55;
+.categoryToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-top: 14px;
   color: var(--slate);
+  font-size: 11px;
 }
 
-.pillarBullet {
-  flex-shrink: 0;
-  margin-top: 3px;
-  font-size: 9px;
-  color: var(--electric);
+.categoryToggle svg {
+  transition: transform 0.3s ease;
+}
+
+.categoryChevronOpen {
+  transform: rotate(180deg);
+  color: var(--coral);
+}
+
+.categoryDescWrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease, opacity 0.3s ease, margin-top 0.35s ease;
+  opacity: 0;
+  margin-top: 0;
+}
+
+.categoryCardActive .categoryDescWrap {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 4px;
+}
+
+.categoryDesc {
+  overflow: hidden;
+  min-height: 0;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--slate);
+  margin: 0;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
 }
 
 /* ============ PROCESS ============ */
@@ -799,7 +833,7 @@
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 1024px) {
-  .pillarsGrid {
+  .categoryGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -857,7 +891,7 @@
     padding-right: 22px;
   }
 
-  .pillarsGrid {
+  .categoryGrid {
     grid-template-columns: 1fr;
   }
 
@@ -1049,13 +1083,6 @@
   line-height: 1.75;
 }
 
-.pillarDesc {
-  font-size: 14px;
-  line-height: 1.75;
-  color: var(--slate);
-  margin: 0;
-}
-
 .processRole {
   font-weight: 700;
   color: var(--coral);
@@ -1219,6 +1246,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
 /* ============ WHY IT MATTERS ============ */
 .valueSection {
   padding: 110px 40px;

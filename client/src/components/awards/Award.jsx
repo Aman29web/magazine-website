@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaChevronDown,
   FaTrophy,
@@ -15,7 +15,6 @@ import {
   FaCalendarAlt,
   FaUsers,
   FaMapMarkedAlt,
-  FaCheck,
   FaArrowRight,
   FaBuilding,
   FaHandshake,
@@ -28,103 +27,98 @@ import {
   FaEye,
   FaShieldAlt,
   FaNetworkWired,
+  FaCommentDots,
+  FaBalanceScale,
+  FaCogs,
 } from "react-icons/fa";
 import styles from "./Award.module.css";
 import Navbar from "../global/navbar/Navbar";
 
-// Flagship, standalone recognition — sits above the six award pillars.
+// Flagship, standalone recognition — sits above the 15 award categories.
 const SPECIAL_AWARD = {
   icon: FaCrown,
   title: "Top 100 HR Leaders",
   desc: "A definitive ranking of the 100 HR leaders shaping the future of work across the MENA region.",
 };
 
-// Six pillars, straight from the official 2026 category list.
-const PILLARS = [
+// 15 award categories, straight from the official 2026 category list.
+const AWARD_CATEGORIES = [
   {
     icon: FaBriefcase,
-    title: "Organisational Excellence",
-    items: [
-      "MENA Employer of the Year – Large Enterprise",
-      "MENA Employer of the Year – SME",
-      "MENA Employer of the Year – Public Sector",
-      "MENA Employer of the Year – Start-up",
-      "HR Team of the Year",
-      "People & Culture Team of the Year",
-      "Best Organisational Culture",
-      "Best Workplace Transformation",
-      "Best Employee Experience Strategy",
-      "Best HR Transformation Programme",
-    ],
+    title: "Organisational Excellence & Employer of the Year",
+    desc: "Honoring organizations, of every size and sector, that set the benchmark for people-first excellence across the MENA region.",
   },
   {
-    icon: FaUserTie,
-    title: "Talent and People Practices",
-    items: [
-      "Excellence in Talent Acquisition",
-      "Excellence in Talent Management",
-      "Excellence in Learning & Development",
-      "Excellence in Leadership Development",
-      "Excellence in Employee Engagement",
-      "Excellence in Employee Wellbeing",
-      "Excellence in Employer Branding",
-      "Excellence in Rewards & Recognition",
-      "Excellence in Performance Management",
-      "Excellence in Workforce Planning",
-    ],
+    icon: FaUsers,
+    title: "HR & People Team Excellence",
+    desc: "Celebrating HR and People teams whose collective impact elevates culture, capability, and business outcomes.",
   },
   {
     icon: FaHandsHelping,
-    title: "Inclusion and Employee Development",
-    items: [
-      "Best Diversity, Equity & Inclusion Strategy",
-      "Best Women's Leadership Development Initiative",
-      "Best Graduate Development Programme",
-      "Best Early-Career Talent Programme",
-      "Best Employee Retention Strategy",
-      "Best Coaching and Mentoring Programme",
-      "Best Internal Mobility Programme",
-      "Best Learning Culture",
-      "Best Mental Health and Wellbeing Initiative",
-      "Best Employee Communication Strategy",
-    ],
+    title: "Organisational Culture & Employee Experience",
+    desc: "Recognizing cultures and experiences deliberately designed to help people do their best work.",
+  },
+  {
+    icon: FaRocket,
+    title: "Workplace Transformation & Future of Work",
+    desc: "Spotlighting bold shifts in how, where, and why work gets done.",
+  },
+  {
+    icon: FaBullhorn,
+    title: "Talent Acquisition & Employer Branding",
+    desc: "Honoring the strategies that attract, convert, and retain exceptional talent.",
+  },
+  {
+    icon: FaUserTie,
+    title: "Talent Management & Workforce Planning",
+    desc: "Recognizing disciplined approaches to building and deploying the workforce of tomorrow.",
   },
   {
     icon: FaLightbulb,
-    title: "Future of Work and Innovation",
-    items: [
-      "Best Use of AI in HR",
-      "Best HR Technology Transformation",
-      "Best People Analytics Initiative",
-      "Best Future Skills Development Programme",
-      "Best Hybrid or Flexible Workplace Strategy",
-      "Best Digital Learning Initiative",
-      "Best Change Management Initiative",
-      "Best People Sustainability and ESG Initiative",
-      "Best HR Innovation of the Year",
-      "Best Employee Listening and Feedback Programme",
-    ],
+    title: "Learning, Development & Future Skills",
+    desc: "Celebrating programmes that close skills gaps and build lasting capability.",
+  },
+  {
+    icon: FaCrown,
+    title: "Leadership Development & People Leadership",
+    desc: "Honoring the development of leaders — and the leaders themselves — shaping people-first organizations.",
+  },
+  {
+    icon: FaCommentDots,
+    title: "Employee Engagement, Listening & Communication",
+    desc: "Recognizing how organizations listen to, engage, and communicate with their people.",
+  },
+  {
+    icon: FaShieldAlt,
+    title: "Employee Wellbeing, Mental Health & Sustainability",
+    desc: "Celebrating initiatives that protect and sustain the wellbeing of the workforce.",
+  },
+  {
+    icon: FaBalanceScale,
+    title: "Diversity, Equity, Inclusion & Women's Leadership",
+    desc: "Honoring organizations building equitable, representative workplaces — and the women leading them.",
+  },
+  {
+    icon: FaStar,
+    title: "Employee Performance, Rewards & Retention",
+    desc: "Recognizing approaches that fairly measure, reward, and retain top talent.",
+  },
+  {
+    icon: FaNetworkWired,
+    title: "HR Technology, AI & People Analytics",
+    desc: "Celebrating the technology and data driving smarter people decisions.",
+  },
+  {
+    icon: FaCogs,
+    title: "HR Innovation, Transformation & Change",
+    desc: "Honoring bold, original thinking that moves HR practice forward.",
   },
   {
     icon: FaGlobeAmericas,
-    title: "MENA Leadership and Regional Impact",
-    items: [
-      "MENA CHRO of the Year",
-      "MENA People Leader of the Year",
-      "MENA HR Changemaker of the Year",
-      "MENA Emerging People Leader of the Year",
-      "MENA HR Business Partner of the Year",
-      "MENA Learning & Development Leader of the Year",
-      "MENA Talent Acquisition Leader of the Year",
-      "Best Nationalisation Programme",
-      "People Leadership Lifetime Achievement Award",
-      "CEO Champion of People and Culture",
-    ],
+    title: "MENA People Leadership & Regional Impact",
+    desc: "Recognizing the individuals whose leadership is shaping the future of work across the region.",
   },
 ];
-
-const TOTAL_CATEGORIES =
-  1 + PILLARS.reduce((sum, pillar) => sum + pillar.items.length, 0);
 
 const PROCESS = [
   {
@@ -161,10 +155,10 @@ const CRITERIA = [
 ];
 
 const STATS = [
-  { icon: FaAward, value: `${TOTAL_CATEGORIES}`, label: "Award Categories" },
+  { icon: FaAward, value: `${AWARD_CATEGORIES.length}`, label: "Award Categories" },
   { icon: FaGlobeAmericas, value: "MENA", label: "Region-Wide Reach" },
   { icon: FaUsers, value: "500+", label: "Nominees Yearly" },
-  { icon: FaTrophy, value: "6", label: "Award Pillars" },
+  { icon: FaCalendarAlt, value: "2026", label: "Awards Edition" },
 ];
 
 const VALUE_PROPS = [
@@ -186,6 +180,12 @@ const VALUE_PROPS = [
 ];
 
 const Award = () => {
+  const [activeCategory, setActiveCategory] = useState(null);
+
+  const toggleCategory = (index) => {
+    setActiveCategory((prev) => (prev === index ? null : index));
+  };
+
   return (
     <>
       {/* Hero */}
@@ -241,12 +241,10 @@ const Award = () => {
         {/* Categories */}
         <section className={styles.categories}>
           <div className={styles.sectionHead}>
-            {/* <span className={styles.kicker}>Award Categories</span> */}
-            <h2>{TOTAL_CATEGORIES} categories, six pillars of excellence</h2>
+            <h2>{AWARD_CATEGORIES.length} categories, one standard of excellence</h2>
             <p className={styles.sectionSub}>
-              From flagship recognition to region-specific leadership
-              honors, every category is judged on its own merit against a
-              consistent standard.
+              Tap a category to see what it recognizes. Every category is
+              judged on its own merit against a consistent standard.
             </p>
           </div>
 
@@ -264,38 +262,45 @@ const Award = () => {
             </div>
           </div>
 
-          <div className={styles.pillarsGrid}>
-            {PILLARS.map(({ icon: Icon, title, items }, i) => (
-              <div key={title} className={styles.pillarCard}>
-                <div className={styles.pillarHeader}>
-                  <span className={styles.pillarNum}>
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div className={styles.pillarIconWrap}>
-                    <Icon />
+          <div className={styles.categoryGrid}>
+            {AWARD_CATEGORIES.map(({ icon: Icon, title, desc }, i) => {
+              const isActive = activeCategory === i;
+              return (
+                <button
+                  key={title}
+                  type="button"
+                  className={`${styles.categoryCard} ${
+                    isActive ? styles.categoryCardActive : ""
+                  }`}
+                  onClick={() => toggleCategory(i)}
+                  aria-expanded={isActive}
+                >
+                  <div className={styles.categoryTop}>
+                    <span className={styles.categoryNum}>
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div className={styles.categoryIconWrap}>
+                      <Icon />
+                    </div>
                   </div>
-                </div>
-                <h3>{title}</h3>
-                <span className={styles.pillarCount}>
-                  {items.length} categories
-                </span>
-                <ul className={styles.pillarList}>
-                  {items.map((item) => (
-                    <li key={item}>
-                      <FaCheck className={styles.pillarBullet} />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+                  <h3>{title}</h3>
+                  <span className={styles.categoryToggle}>
+                    <FaChevronDown
+                      className={isActive ? styles.categoryChevronOpen : ""}
+                    />
+                  </span>
+                  <div className={styles.categoryDescWrap}>
+                    <p className={styles.categoryDesc}>{desc}</p>
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </section>
 
         {/* Selection process */}
         <section className={styles.process}>
           <div className={styles.sectionHead}>
-            {/* <span className={styles.kickerLight}>How It Works</span> */}
             <h2>From nomination to recognition</h2>
           </div>
 
@@ -340,24 +345,20 @@ const Award = () => {
           </div>
         </section>
 
-        {/* Testimonials */}
-       
-
         {/* Global reach banner */}
         <section className={styles.reach}>
           <div className={styles.reachInner}>
             <FaMapMarkedAlt className={styles.reachIcon} />
-            {/* <span className={styles.kickerLight}>Regional Recognition</span> */}
             <h2>
               Celebrated on stages across the MENA region, honoring HR
               leaders wherever bold decisions about people are being made.
             </h2>
           </div>
         </section>
- {/* Why recognition matters */}
+
+        {/* Why recognition matters */}
         <section className={styles.valueSection}>
           <div className={styles.sectionHead}>
-            {/* <span className={styles.kicker}>Why It Matters</span> */}
             <h2>Recognition built to carry weight</h2>
           </div>
 
@@ -373,10 +374,10 @@ const Award = () => {
             ))}
           </div>
         </section>
+
         {/* Nomination CTA */}
         <section id="nominate" className={styles.nominateCta}>
           <div className={styles.nominateInner}>
-            {/* <span className={styles.kickerLight}>Nominations Open</span> */}
             <h2 className={styles.nominateTitle}>
               Know a leader who deserves the spotlight?
             </h2>

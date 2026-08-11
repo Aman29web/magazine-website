@@ -234,10 +234,10 @@ export default function Nomination() {
               <div>
                 <span className={styles.sideFooterLabel}>Questions?</span>
                 <a
-                  href="mailto:nominations@leadershipgazette.com"
+                  href="mailto:nominations@theleadershipgazette.com"
                   className={styles.sideFooterValue}
                 >
-                  nominations@leadershipgazette.com
+                  nominations@theleadershipgazette.com
                 </a>
               </div>
               <div className={styles.sideSocials}>

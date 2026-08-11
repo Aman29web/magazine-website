@@ -5,13 +5,13 @@ import styles from "./Navbar.module.css";
 
 const NAV_LINKS = [
   { label: "About Us", href: "/about" },
-  { label: "Interviews", href: "/home" },
+  { label: "Interviews", href: "/interviews" },
   {
     label: "Awards",
     href: "/awards",
     submenu: [
       { label: "Mena People Excellence Awards", href: "/awards" },
-      { label: "Business Excellence Awards", href: "/business-award" },
+      { label: "Business Excellence Awards", href: "/home" },
     ],
   },
   { label: "Contact Us", href: "/contact" },
