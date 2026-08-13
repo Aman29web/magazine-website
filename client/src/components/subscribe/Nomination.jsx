@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   FiClock,
   FiShield,
@@ -14,6 +15,10 @@ import {
 } from "react-icons/fi";
 import styles from "./Nomination.module.css";
 import Navbar from "../global/navbar/Navbar";
+
+const EMAILJS_SERVICE_ID = "service_xl5inpg";
+const EMAILJS_TEMPLATE_ID = "template_0bl9op9";
+const EMAILJS_PUBLIC_KEY = "O2EVDxAmA4RqABPGA";
 
 const INITIAL_STATE = {
   fullName: "",
@@ -102,10 +107,28 @@ export default function Nomination() {
 
     setSubmitting(true);
     try {
-      // Wire up EmailJS (or your form endpoint) here, e.g.:
-      // await emailjs.send("SERVICE_ID", "TEMPLATE_ID", formData, "PUBLIC_KEY");
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          fullName: formData.fullName,
+          jobTitle: formData.jobTitle,
+          organisation: formData.organisation,
+          country: formData.country,
+          email: formData.email,
+          phone: formData.phone,
+          linkedin: formData.linkedin,
+          programme: formData.programme,
+          track: formData.track,
+          category: formData.category,
+          why: formData.why,
+          achievement: formData.achievement,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
       setSubmitted(true);
     } catch (err) {
+      console.error("EmailJS error:", err);
       setErrors({ form: "Something went wrong. Please try again." });
     } finally {
       setSubmitting(false);

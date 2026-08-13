@@ -11,7 +11,7 @@ const NAV_LINKS = [
     href: "/awards",
     submenu: [
       { label: "Mena People Excellence Awards", href: "/awards" },
-      { label: "Business Excellence Awards", href: "/home" },
+      // { label: "Business Excellence Awards", href: "/home" },
     ],
   },
   { label: "Contact Us", href: "/contact" },

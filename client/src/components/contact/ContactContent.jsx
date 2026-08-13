@@ -27,6 +27,10 @@ import {
 } from "react-icons/fa";
 import styles from "./Contact.module.css";
 
+const EMAILJS_SERVICE_ID = "service_xl5inpg";
+const EMAILJS_TEMPLATE_ID = "template_4fbbpo4";
+const EMAILJS_PUBLIC_KEY = "O2EVDxAmA4RqABPGA";
+
 const CONTACT_INFO = [
   // {
   //   icon: FaEnvelope,
@@ -124,13 +128,12 @@ const ContactContent = () => {
     e.preventDefault();
     setStatus("sending");
 
-    // Replace with your EmailJS Service ID, Template ID, and Public Key
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
         formRef.current,
-        "YOUR_PUBLIC_KEY"
+        EMAILJS_PUBLIC_KEY
       )
       .then(() => {
         setStatus("sent");
@@ -274,7 +277,7 @@ const ContactContent = () => {
                       <input
                         type="text"
                         id="name"
-                        name="user_name"
+                        name="fullName"
                         placeholder="Your full name"
                         required
                       />
@@ -284,7 +287,7 @@ const ContactContent = () => {
                       <input
                         type="email"
                         id="email"
-                        name="user_email"
+                        name="email"
                         placeholder="you@company.com"
                         required
                       />
@@ -293,7 +296,7 @@ const ContactContent = () => {
 
                   <div className={styles.field}>
                     <label htmlFor="subject">I&rsquo;m Reaching Out About</label>
-                    <select id="subject" name="subject" defaultValue="">
+                    <select id="subject" name="jobTitle" defaultValue="">
                       <option value="" disabled>
                         Select a reason
                       </option>

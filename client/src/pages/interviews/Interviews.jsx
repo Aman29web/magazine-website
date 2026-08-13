@@ -16,16 +16,15 @@ const Interviews = () => {
         <div className={styles.heroOverlay}></div>
 
         <div className={styles.heroContent}>
-          <span className={styles.heroKicker}>Conversations</span>
+          {/* <span className={styles.heroKicker}>Conversations</span> */}
 
           <h1 className={styles.heroTitle}>
-            Voices That
-            <span className={styles.heroHighlight}>Shape Tomorrow</span>
+           
+            <span className={styles.heroHighlight}> Voices That Shape Tomorrow, Conversations that go beyond the headlines.</span>
           </h1>
 
           <p className={styles.heroSubtitle}>
-            Explore conversations with the people, leaders and innovators
-            shaping industries, ideas and the future.
+Explore conversations with the people, leaders and innovators shaping industries, ideas and the future. Discover perspectives, experiences and ideas from leaders and changemakers across different industries.
           </p>
         </div>
 
@@ -37,21 +36,7 @@ const Interviews = () => {
       </section>
 
       {/* INTRO */}
-      <section className={styles.intro}>
-        <div className={styles.introInner}>
-          <span className={styles.kicker}>Our Interviews</span>
-
-          <h2 className={styles.introTitle}>
-            Conversations that go
-            <span> beyond the headlines.</span>
-          </h2>
-
-          <p className={styles.introText}>
-            Discover perspectives, experiences and ideas from leaders and
-            changemakers across different industries.
-          </p>
-        </div>
-      </section>
+    
 
       {/* INTERVIEWS */}
       <section className={styles.interviewsSection}>

@@ -8,7 +8,9 @@ const interviews = [
     company: "Evonik",
     introduction:
       "As workplaces become increasingly digital, distributed and skills-driven, the mandate of HR and Learning leaders is expanding. Delivering training is no longer enough. Today’s leaders must anticipate capability gaps, strengthen organizational culture and demonstrate a measurable connection between people development and business performance.",
-    image: "/interviews/img1.jpeg",
+    image: "/interviews-/Fatima.jpeg",
+    heroImage: "/interviews-/img1.jpeg",
+
     questions: [
       {
         question:
@@ -63,7 +65,8 @@ const interviews = [
     designation: "Industry Expert",
     introduction:
       "The workplace is no longer simply being supported by technology—it is being redefined by it. As AI moves from assisting employees to performing increasingly autonomous work, organizations must reconsider how decisions are influenced, which roles remain critical and what effective leadership now demands.",
-    image: "/interviews/img1.jpeg",
+    image: "/interviews-/Imran.jpeg",
+     heroImage: "/interviews-/img1.jpeg",
     questions: [
       {
         question: "Which workplace trends are here to stay, and why?",
@@ -99,7 +102,8 @@ const interviews = [
     company: "EgySwiss Holding",
     introduction:
       "The most effective HR leaders do more than manage policies, processes and employee concerns. They help organizations make better decisions by connecting people strategy with commercial priorities—while ensuring that fairness, dignity and trust are not lost along the way.",
-    image: "/interviews/img1.jpeg",
+    image: "/interviews-/Fouda.jpeg",
+     heroImage: "/interviews-/img1.jpeg",
     questions: [
       {
         question:
@@ -142,7 +146,8 @@ const interviews = [
     company: "Al Ahly For Real Estate Development",
     introduction:
       "For Hanan Ibrahim, people strategy begins with understanding where the business is going—and building the leadership capability required to take it there.",
-    image: "/interviews/img1.jpeg",
+    image: "/interviews-/Hanan.jpeg",
+     heroImage: "/interviews-/img1.jpeg",
     questions: [
       {
         question:
@@ -164,7 +169,108 @@ const interviews = [
       },
     ],
   },
+{
+  id: "kabira-bhatporia",
+  title:
+    "Trust, Talent and Transformation: Kabira Bhatporia on Building a Future-Ready Workforce",
+  person: "Kabira Bhatporia",
+  designation: "Head of HR",
+  company: "JLL",
+  introduction:
+    "As organisations navigate technological disruption, shifting employee expectations and an increasingly competitive talent market, the role of HR is becoming both more strategic and more human. For Kabira Bhatporia, Head of HR at JLL, effective people leadership begins with honesty, empathy and a willingness to listen. In this conversation with The Leadership Gazette, she discusses building trust during uncertainty, competing through career opportunities rather than compensation alone, preparing employees for an AI-enabled future and creating a workplace in which people feel safe, supported and able to grow.",
+  image: "/interviews-/Kabira.jpeg",
+  heroImage: "/interviews-/img1.jpeg",
+  questions: [
+    {
+      question:
+        "What has been the most significant leadership lesson of your career?",
+      answer:
+        "Certainty is not what earns trust—honesty does. As leaders, vulnerability is not simply something we display; it is something we need to recognise in ourselves and respond to with empathy. I saw this play out clearly during the pandemic and the recent regional crisis. Being present, listening and supporting people through uncertainty built more trust than having every answer ever could. The same principle applies to everyday leadership. We will not always have all the answers, but our ability to show up, listen and provide support creates a transparent and inclusive environment that people want to be part of.",
+    },
+    {
+      question:
+        "How can organisations compete for talent in an increasingly competitive market?",
+      answer:
+        "We do not compete on salary alone—we compete on career architecture. I believe JLL is not simply a place to take up a job or complete a project; it is a place where people can build a career. That growth may take place within the same department, across different functions or through opportunities in other geographies. Structured graduate programmes, university partnerships and initiatives such as our Real Estate Knowledge Hub in Saudi Arabia give people a visible path forward. Our growth from fewer than 200 employees to more than 1,600 was possible because talent could see where their careers might lead—not merely where they would begin.",
+    },
+    {
+      question:
+        "How are changing workforce expectations influencing the workplace?",
+      answer:
+        "The next generation wants purpose, flexibility and a voice—not just a compensation package. We continually look for ways to create open dialogue across the organisation and at every level. Initiatives such as coffee sessions with new joiners help us build the kind of open culture that employees increasingly value. Our Gen Z Advisory Board brings greater structure to this listening process. It helps ensure that leadership decisions reflect what talent expects today, rather than relying solely on approaches that may have worked a decade ago. Listening cannot be treated as an occasional engagement exercise. It must become part of how an organisation operates and makes decisions.",
+    },
+    {
+      question:
+        "How is AI transforming the role of HR?",
+      answer:
+        "AI’s impact on HR will be reflected through the evolution of jobs rather than simply their elimination. The transformation is similar to what we experienced during the early years of the internet—a period that ultimately created new categories of work rather than only removing existing roles. Jobs are now evolving to incorporate AI tools, requiring HR professionals to develop a combination of strategic thinking, adaptive leadership and technological fluency. The key is to view AI as a tool that helps employees build future-ready skills and work more effectively in their day-to-day roles—not as a replacement for humanity within HR. AI can provide stronger data, validate and sharpen our decisions, and give us a more holistic view of the organisation. However, we cannot stop developing our critical-thinking abilities. That human judgement, combined with the intelligence provided by technology, is what enables better decisions. The real difference lies in execution. Organisations that position AI as an opportunity to build capability, rather than merely reduce headcount, are more likely to achieve genuine adoption instead of resistance. Ultimately, people will unlock AI’s true potential. For HR professionals, the career implications are clear. Those who develop technological fluency while retaining their strategic and human-centred capabilities will continue to advance. Those who resist adapting risk being left behind as the profession reshapes how it creates value. The transformation is not about technology replacing people. It is about empowered professionals using technology to deliver greater strategic impact.",
+    },
+    {
+      question:
+        "How can organisations foster a culture of continuous learning?",
+      answer:
+        "I strongly believe that learning never stops—and it does not need to happen only through traditional methods. People should continue learning and growing in whichever direction they aspire to develop. At JLL, we are investing in persona-based training that helps employees become more effective in their current roles while preparing them for what comes next. This mindset, supported by our “Be Curious” behaviour and initiatives such as the Real Estate Knowledge Hub, enables development to take place through live projects, mentoring and professional exposure—not simply through a formal training calendar. A genuine learning culture exists when development becomes part of everyday work rather than an activity employees attend occasionally.",
+    },
+    {
+      question:
+        "Which initiative has made the greatest impact on employee mental health and well-being?",
+      answer:
+        "Employee welfare and safety are paramount for us, and every initiative we introduce is intentionally connected to strengthening people’s sense of safety at work. The Sunflower Programme is particularly meaningful. Through something as simple as a lanyard, an employee can indicate that they may be navigating a hidden condition without being required to explain themselves. Combined with trained mental health first aiders across the business, the programme has helped turn support into a peer relationship rather than leaving it as a corporate policy. That is what begins to create genuine cultural change. Policies are important, but employees experience support most powerfully through the everyday actions of the people around them.",
+    },
+    {
+      question:
+        "What inspired you to pursue a career in HR?",
+      answer:
+        "It happened organically, honestly. My early years were shaped by learning from exceptional mentors. Seeing the impact I could have on someone’s career—and having the opportunity to become part of their professional journey in different ways—gradually developed into a genuine passion. Working in HR also gave me a deeper appreciation of how people strategy connects directly with employee engagement, productivity and, ultimately, business performance. It is never only about people processes; it is about outcomes. Today, it feels like second nature. There is a real sense of fulfilment in being an enabler for both the business and its people.",
+    },
+  ],
+},
+{
+  id: "ali-s-al-khater",
+  title:
+    "Find, Keep and Grow: Ali S. Al-Khater on the Future of Human Resources",
+  person: "Ali S. Al-Khater",
+  designation: "Head of HR & Shared Services",
+  company: "Vision Industries",
+  introduction:
+    "As artificial intelligence, shifting workforce expectations and economic uncertainty reshape the workplace, HR leaders are being asked to do far more than manage people processes. They must anticipate future capabilities, strengthen leadership, build adaptable organisations and create environments in which exceptional people choose to stay.",
 
+  image: "/interviews-/Ali.jpeg",
+  heroImage: "/interviews-/img1.jpeg",
+
+  questions: [
+    {
+      question:
+        "What is the biggest challenge facing HR leaders today, and how should they respond?",
+      answer:
+        "The biggest challenge is no longer simply attracting talent. It is building organisations that can continuously adapt while keeping their best people engaged and committed.\n\nOrganisations are facing simultaneous pressures from AI, changing skills requirements, economic uncertainty and evolving employee expectations. HR leaders therefore need to move beyond a primary focus on HR processes and become strategic business partners who understand where the organisation is going and the capabilities it will need to succeed.\n\nMy philosophy is simple: HR = Find + Keep.\n\nWe need to find the right talent but, equally importantly, create the leadership, culture, development opportunities and employee experience that encourage exceptional people to stay and grow.\n\nThe future belongs to organisations capable of building both organisational agility and human commitment.",
+    },
+    {
+      question:
+        "How do you see AI reshaping the role of HR over the next five years?",
+      answer:
+        "AI will fundamentally change how HR operates, but I do not believe it will make HR less human. In fact, it will make the human dimension of HR even more important.\n\nAI will automate many transactional activities, improve workforce analytics, accelerate talent acquisition, personalise learning and help leaders make better-informed people decisions. Its greatest potential, however, lies in giving HR professionals more time to focus on what technology cannot replace: leadership, trust, judgement, empathy, culture and relationships.\n\nOver the next five years, I expect the most successful HR functions to combine AI-powered intelligence with distinctly human leadership.\n\nHR leaders should therefore not ask, “How can AI replace what we do?” The better question is, “How can AI help us perform our role more effectively and create greater value for the business and its people?”",
+    },
+    {
+      question:
+        "How does HR contribute directly to business growth?",
+      answer:
+        "HR contributes to growth when people strategy is directly connected to business strategy.\n\nEvery business strategy depends on having the right capabilities, leadership, organisational structure and talent to execute it. HR therefore has a direct responsibility for helping the business answer three fundamental questions:\n\n• What capabilities do we need?\n• Where will we find them?\n• How will we retain and develop them?\n\nThis is why HR should be measured not only through traditional people metrics but also through business outcomes—including productivity, speed of execution, leadership capability, talent retention, organisational effectiveness and the ability to build critical capabilities for future growth.\n\nPut simply, HR creates value when the right people are in the right roles, with the right capabilities, at the right time.",
+    },
+    {
+      question:
+        "What creates an exceptional employee experience?",
+      answer:
+        "An exceptional employee experience is created when there is consistency between what an organisation promises and what its leaders actually deliver.\n\nIt is not simply about benefits, engagement surveys or workplace amenities. It begins with meaningful work, capable leadership, fairness, opportunities to grow, appropriate recognition and a culture in which people feel trusted and respected.\n\nThe employee experience is shaped by the moments that matter throughout the employee lifecycle—from joining the organisation and developing professionally to receiving recognition, navigating difficult conversations and making important career decisions.\n\nOne of the most important lessons I have learned is that people rarely leave organisations alone. They often leave because of their experiences, leadership or a perceived lack of opportunity.\n\nCreating an exceptional employee experience therefore requires HR and business leaders to assume shared ownership of the entire employee journey.",
+    },
+    {
+      question:
+        "What leadership principle has guided your career the most?",
+      answer:
+        "The principle that has guided me throughout my career is simple: lead with people, but never lose sight of the business.\n\nHR leaders have a responsibility to advocate for people, but we must also understand the commercial realities of the organisation. The strongest HR decisions are those that create sustainable value for both.\n\nI have also learned that leadership is not about having all the answers. It is about building capable teams, establishing trust, making difficult decisions when necessary and giving people the opportunity to succeed.\n\nWhen organisations find great people, provide them with strong leadership, enable them to perform and grow, and create a culture in which they want to remain, everyone benefits. People succeed, businesses perform and organisations become more sustainable.",
+    },
+  ],
+},
   {
     id: "mohammed-zughbi",
     title: "Leadership Is Not About Being the Hero of the Story",
@@ -173,7 +279,8 @@ const interviews = [
     company: "Richemont",
     introduction:
       "The most effective leaders are not defined by how many decisions they make, but by how confidently others can make decisions in their absence.\n\nThis belief sits at the heart of Mohammed Zughbi’s leadership philosophy. As Country Human Resources Director at Richemont, he sees the modern HR function as an architect of organisational health—responsible for creating the conditions in which people can grow, perform sustainably and navigate change with confidence.",
-    image: "/interviews/img1.jpeg",
+    image: "/interviews-/Zugfi.jpeg",
+     heroImage: "/interviews-/img1.jpeg",
     questions: [
       {
         question: "How has your leadership philosophy evolved over the years?",

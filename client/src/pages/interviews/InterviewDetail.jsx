@@ -43,10 +43,10 @@ const InterviewDetail = () => {
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroImage}>
-          <img
-            src={interview.image}
-            alt={`${interview.person} - ${interview.title}`}
-          />
+         <img
+  src={interview.heroImage}
+  alt={`${interview.person} - ${interview.title}`}
+/>
         </div>
 
         <div className={styles.heroOverlay}></div>
@@ -89,7 +89,16 @@ const InterviewDetail = () => {
           <p>{interview.introduction}</p>
         </div>
       </section>
-
+{/* INTERVIEW IMAGE */}
+<section className={styles.interviewImageSection}>
+  <div className={styles.interviewImageWrapper}>
+    <img
+      src={interview.image}
+      alt={`${interview.person} - ${interview.title}`}
+      className={styles.interviewImage}
+    />
+  </div>
+</section>
       {/* INTERVIEW */}
       <section className={styles.interviewContent}>
         <div className={styles.contentGrid}>
