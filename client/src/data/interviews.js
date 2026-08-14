@@ -4,7 +4,7 @@ const interviews = [
     title:
       "From Training to Transformation: Why the Future of Learning Must Be Human, Strategic and AI-Enabled",
     person: "Fatima Mirza",
-    designation: "Head of HR",
+    designation: "Industry Expert",
     company: "Evonik",
     introduction:
       "As workplaces become increasingly digital, distributed and skills-driven, the mandate of HR and Learning leaders is expanding. Delivering training is no longer enough. Today’s leaders must anticipate capability gaps, strengthen organizational culture and demonstrate a measurable connection between people development and business performance.",
@@ -176,6 +176,7 @@ const interviews = [
   person: "Kabira Bhatporia",
   designation: "Head of HR",
   company: "JLL",
+  type: "jury",
   introduction:
     "As organisations navigate technological disruption, shifting employee expectations and an increasingly competitive talent market, the role of HR is becoming both more strategic and more human. For Kabira Bhatporia, Head of HR at JLL, effective people leadership begins with honesty, empathy and a willingness to listen. In this conversation with The Leadership Gazette, she discusses building trust during uncertainty, competing through career opportunities rather than compensation alone, preparing employees for an AI-enabled future and creating a workplace in which people feel safe, supported and able to grow.",
   image: "/interviews-/Kabira.jpeg",
@@ -277,6 +278,7 @@ const interviews = [
     person: "Mohammed Zughbi",
     designation: "Country Human Resources Director",
     company: "Richemont",
+    type: "jury",
     introduction:
       "The most effective leaders are not defined by how many decisions they make, but by how confidently others can make decisions in their absence.\n\nThis belief sits at the heart of Mohammed Zughbi’s leadership philosophy. As Country Human Resources Director at Richemont, he sees the modern HR function as an architect of organisational health—responsible for creating the conditions in which people can grow, perform sustainably and navigate change with confidence.",
     image: "/interviews-/Zugfi.jpeg",

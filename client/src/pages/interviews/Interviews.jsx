@@ -5,6 +5,13 @@ import styles from "./Interviews.module.css";
 import Navbar from "../../components/global/navbar/Navbar";
 import Footer from "../../components/global/footer/Footer";
 
+const juryInterviews = interviews.filter(
+  (interview) => interview.type === "jury"
+);
+
+const regularInterviews = interviews.filter(
+  (interview) => interview.type !== "jury"
+);
 const Interviews = () => {
   return (
     <main className={styles.page}>
@@ -54,7 +61,7 @@ Explore conversations with the people, leaders and innovators shaping industries
         </div>
 
         <div className={styles.interviewGrid}>
-          {interviews.map((interview, index) => (
+       {regularInterviews.map((interview, index) => (
             <Link
               key={interview.id}
               to={`/interviews/${interview.id}`}
@@ -103,7 +110,72 @@ Explore conversations with the people, leaders and innovators shaping industries
           ))}
         </div>
       </section>
+{/* JURY INTERVIEWS */}
+<section className={styles.interviewsSection}>
+  <div className={styles.sectionHead}>
+    <div>
+      <span className={styles.kicker}>Jury Interviews</span>
 
+      <h2>Conversations with our jury.</h2>
+    </div>
+
+    <p>
+      Insights and perspectives from the distinguished members of our jury.
+    </p>
+  </div>
+
+ <div className={styles.interviewGrid}>
+  {juryInterviews.map((interview, index) => (
+    <Link
+      key={interview.id}
+      to={`/interviews/${interview.id}`}
+      className={styles.interviewCard}
+    >
+      <div className={styles.imageWrapper}>
+        <img
+          src={interview.image}
+          alt={`${interview.person} - ${interview.title}`}
+          className={styles.interviewImage}
+          loading={index < 2 ? "eager" : "lazy"}
+        />
+
+        <div className={styles.imageOverlay}></div>
+
+        <div className={styles.playButton}>
+          <FiPlay />
+        </div>
+
+        <span className={styles.category}>
+          {interview.category}
+        </span>
+      </div>
+
+      <div className={styles.cardContent}>
+        <div className={styles.cardMeta}>
+          <span>{interview.date}</span>
+
+          <span className={styles.metaDot}>•</span>
+
+          <span>{interview.category}</span>
+        </div>
+
+        <h3>{interview.title}</h3>
+
+        <div className={styles.personInfo}>
+          <div>
+            <strong>{interview.person}</strong>
+            <span>{interview.designation}</span>
+          </div>
+
+          <span className={styles.cardArrow}>
+            <FiArrowUpRight />
+          </span>
+        </div>
+      </div>
+    </Link>
+  ))}
+</div>
+</section>
       {/* DARK CTA */}
       <section className={styles.cta}>
         <div className={styles.ctaInner}>
